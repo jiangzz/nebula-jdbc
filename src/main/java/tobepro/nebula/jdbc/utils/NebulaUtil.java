@@ -50,7 +50,7 @@ public class NebulaUtil {
                 throw new SQLException(MessageFormat.format("\nNebula Error: {0} \n {1}", result.getErrorCode(), result.getErrorMessage()));
             }
             return function.apply(result);
-        } catch (IOErrorException | UnsupportedEncodingException e) {
+        } catch (IOErrorException e) {
             throw new SQLException(e);
         }
     }
